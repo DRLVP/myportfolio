@@ -4,6 +4,7 @@ let navbar = document.querySelector(".navbar");
 
 window.addEventListener("scroll", () => {
   header.classList.toggle("shadow", window.scrollY > 0);
+  header.classList.toggle("dark", window.scrollY > 0);
 });
 
 menu.onclick = () => {
