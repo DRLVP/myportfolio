@@ -1,7 +1,7 @@
 /**********************
   GOOGLE FONTS CDN
 ***********************/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&family=Ubuntu&display=swap');
 
 /*******************
   CSS RESET
@@ -14,7 +14,7 @@
   text-decoration: none;
   scroll-behavior: smooth;
   scroll-padding-top: 2rem;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 /********************
@@ -162,13 +162,15 @@ header.shadow {
 }
 
 .home-text h2 {
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-family: 'Source Code Pro', monospace;
 }
 
 .home-text p {
-  font-size: var(--p-font);
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Source Code Pro', monospace;
   margin: 0.7rem 0 1rem;
 }
 
@@ -216,7 +218,7 @@ header.shadow {
 }
 
 .about-text p {
-  font-size: var(--p-font);
+  font-size: 1.2rem;
   font-weight: 400;
   text-align: justify;
 }
@@ -263,8 +265,21 @@ header.shadow {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem;
   margin-bottom: 1rem;
+  box-shadow: 1px 1px 4px blue;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.5s ease-in;
+}
+.bars-box:hover{
+  transform: translate(20px);
+  box-shadow: 4px 4px 10px var(--hover);
+}
+.bars-box i{
+  font-size: 1.8rem;
+  color: var(--hover);
+  cursor: pointer;
 }
 
 .bars-box h3,
@@ -282,15 +297,18 @@ span {
   background: hsla(260, 100%, 44%, 0.4);
   border-radius: 0.5rem;
 }
-
+.light-bar:hover{
+  animation: loading 0.8s linear;
+}
 .percent-bar {
   position: absolute;
   bottom: 0;
   left: 0;
   height: 0.5rem;
-  background: var(--main-color);
+  background: var(--hover);
   border-radius: 0.5rem;
 }
+
 
 .html-bar {
   width: 94%;
@@ -306,6 +324,12 @@ span {
 
 .react-bar {
   width: 80%;
+}
+.tailwind-bar{
+  width: 75%;
+}
+.bootstrap-bar{
+  width: 85%;
 }
 
 .services-content {
@@ -457,4 +481,14 @@ form textarea {
 .copyright a {
   color: #22cf91;
 }
-
+/*************************
+  ANIMATION
+**************************/
+@keyframes loading{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
